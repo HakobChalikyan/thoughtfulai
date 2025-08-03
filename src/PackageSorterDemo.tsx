@@ -1,7 +1,6 @@
 import { useState } from "react";
 import {
   Package,
-  Scale,
   Ruler,
   AlertTriangle,
   CheckCircle,
@@ -30,7 +29,7 @@ export default function PackageSorterDemo() {
         return {
           result: null,
           error: "Please enter valid numbers",
-          stats: { volume: 0, isBulky: false, isHeavy: false }
+          stats: { volume: 0, isBulky: false, isHeavy: false },
         };
       }
 
@@ -46,13 +45,13 @@ export default function PackageSorterDemo() {
       return {
         result: sortResult,
         error: "",
-        stats: { volume, isBulky, isHeavy }
+        stats: { volume, isBulky, isHeavy },
       };
     } catch (err) {
       return {
         result: null,
         error: err instanceof Error ? err.message : "Invalid input",
-        stats: { volume: 0, isBulky: false, isHeavy: false }
+        stats: { volume: 0, isBulky: false, isHeavy: false },
       };
     }
   };
@@ -149,8 +148,7 @@ export default function PackageSorterDemo() {
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1 flex items-center gap-2">
-                <Scale className="w-4 h-4" />
+              <label className="block text-sm font-medium text-gray-700 mb-1 items-center gap-2">
                 Mass (kg)
               </label>
               <input
@@ -238,7 +236,9 @@ export default function PackageSorterDemo() {
                   <div className="flex justify-between">
                     <span className="text-gray-600">Is Bulky:</span>
                     <span
-                      className={`font-medium ${stats.isBulky ? "text-orange-600" : "text-green-600"}`}
+                      className={`font-medium ${
+                        stats.isBulky ? "text-orange-600" : "text-green-600"
+                      }`}
                     >
                       {stats.isBulky ? "Yes" : "No"}
                     </span>
@@ -246,7 +246,9 @@ export default function PackageSorterDemo() {
                   <div className="flex justify-between">
                     <span className="text-gray-600">Is Heavy:</span>
                     <span
-                      className={`font-medium ${stats.isHeavy ? "text-orange-600" : "text-green-600"}`}
+                      className={`font-medium ${
+                        stats.isHeavy ? "text-orange-600" : "text-green-600"
+                      }`}
                     >
                       {stats.isHeavy ? "Yes" : "No"}
                     </span>
