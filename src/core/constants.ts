@@ -1,0 +1,11 @@
+export const SORTING_THRESHOLDS = {
+  VOLUME_THRESHOLD: 1_000_000, // cm³
+  DIMENSION_THRESHOLD: 150, // cm
+  MASS_THRESHOLD: 20, // kg
+} as const;
+
+export const STACK_NAMES = {
+  STANDARD: "STANDARD",
+  SPECIAL: "SPECIAL",
+  REJECTED: "REJECTED",
+} as const;
