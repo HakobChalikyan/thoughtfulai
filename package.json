@@ -1,7 +1,7 @@
 {
-  "name": "react-typescript",
+  "name": "thoughtful-ai-demo",
   "version": "1.0.0",
-  "description": "React TypeScript on Replit, using Vite bundler",
+  "description": "Package Sorter Demo for Thoughtful AI",
   "main": "index.js",
   "scripts": {
     "build": "vite build",
